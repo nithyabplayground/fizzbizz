@@ -1,5 +1,9 @@
 package com.example;
 
+import com.google.common.base.Strings;
+
+import static org.apache.commons.lang3.StringUtils.EMPTY;
+
 /**
  * Class to test fizzbuzz functionality
  */
@@ -20,7 +24,7 @@ public class Solution {
 		int luckyCount = 0;
 		int integer = 0;
 		if(inputRange <= 0){
-			return Strings.EMPTY;
+			return EMPTY;
 		}
 
 		for (int i = 1; i <= inputRange; i++) {
@@ -56,7 +60,8 @@ public class Solution {
 		System.out.println("fizzbuzz: " + fizzbuzzCount);
 		System.out.println("lucky: " + luckyCount);
 		System.out.println("integer: " + integer);
-		return output.toString();
+		System.out.println(output);
+		return output.toString().trim();
 	}
 
 	public static void main(String[] args) {
